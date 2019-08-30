@@ -16,7 +16,17 @@ namespace PasswordManager {
             passwordManager.Add("maxtrain9.com", "Pass9");
 
             var password = passwordManager["maxtrain.com"];
-            Console.WriteLine($"The password for maxtrain.com is {password}"); 
+            Console.WriteLine($"The password for maxtrain.com is {password}");
+
+            foreach (var keyvalpair in passwordManager) {
+                Console.WriteLine($"The password for {keyvalpair.Key} is {keyvalpair.Value}");
+            }
+
+            var allTheKeys = passwordManager.Keys;
+            var allTheValues = passwordManager.Values;
+
+            var maxtrain = "maxtrain.com";
+          var exists =   passwordManager.ContainsKey(maxtrain);
         }
     }
 }
